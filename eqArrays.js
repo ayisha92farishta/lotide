@@ -7,7 +7,6 @@ const assertEqual = function(arrayOne, arrayTwo) {
 
 };
 
-// create a nested loop to see if each item in the array match exactly with the other.
 
 const eqArrays = function (arrayOne, arrayTwo){
   let output = 0;
