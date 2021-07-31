@@ -39,17 +39,18 @@ const letterPositions = function(sentence) {
     if (currentLetter in results){
       continue
     }
+    
     results[currentLetter] = []
+    
     for (let j = i; j < withoutSpace.length; j++) {
       if (currentLetter === withoutSpace[j]) {
-        let currentLetterIndex = withoutSpace.indexOf(withoutSpace[j]);
+        let currentLetterIndex = j;
         //console.log(currentLetterIndex)
         results[currentLetter].push(currentLetterIndex)
       }
     }
-  }
-  
+  }  
   return results;
 };
 
-assertArraysEqual(letterPositions("hello").e, [1]);
+console.log(letterPositions("lighthouse Labsh"))
