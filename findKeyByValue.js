@@ -13,12 +13,10 @@ const assertEqual = function(actual, expected) {
 
 const findKeyByValue = function( list, value) {
   let output = undefined;
-
   for(const keys in list) {
     if (value === list[keys]){
     output = keys
   }
-
   }
   return output
   
