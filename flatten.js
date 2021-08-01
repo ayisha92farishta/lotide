@@ -1,32 +1,13 @@
 
-const eqArrays = function (arrayOne, arrayTwo){
-  let output = 0;
-  for(let i = 0; i< arrayOne.length; i++) {
-    if(arrayOne[i] === arrayTwo[i]){
-      output++
-    }
-    
-  }if(output === arrayOne.length && output === arrayTwo.length){
-    return true;
-  } else {
-    return false
-  }
-}
-
-
 const assertArraysEqual = function(arrayOne, arrayTwo){
-  let output = 0;
-  for(let i = 0; i< arrayOne.length; i++) {
-    if(arrayOne[i] === arrayTwo[i]){
-      output++
-    }
-  }
-  if(output === arrayOne.length && output === arrayTwo.length){
+  const result = eqArrays(arrayOne, arrayTwo)
+  if(result){
     console.log(` ✅✅✅ Assertion Passed: ${arrayOne} === ${arrayTwo}`)
   } else {
     console.log(`🛑🛑🛑 Assertion Failed: ${arrayOne} !== ${arrayTwo}`)
   }
 }
+
 //create an empty array where all the elements shall be stored
 //loop through each element of the main array
 //if i is a nested array then get inside the array and push each elements of that nested array to the empty array
