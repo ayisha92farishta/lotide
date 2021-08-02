@@ -1,3 +1,4 @@
+
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(` ✅✅✅ Assertion Passed: ${actual} === ${expected}`);
@@ -7,32 +8,34 @@ const assertEqual = function(actual, expected) {
 
 };
 
-// Returns true if both objects have identical keys with identical values.
-// Otherwise you get back a big fat false!
-
-
-
-const eqObjects = function(object1, object2) {
+const eqArrays = function (arrayOne, arrayTwo){
   let output = 0;
-  // getting the number of keys in Object 1 and two to later compare with the output length
-  let length1 = Object.keys(object1).length;
-  let length2 = Object.keys(object2).length;
-  for (const key1 in object1){
-    for (const key2 in object2){   
-    if ((key1 in object2) && (key2 in object1)) {
-      // check if any of the values are an array
-      //if so then in the arrays are strictly equal to the other value
-      //if both checks out then output++
+  for(let i = 0; i< arrayOne.length; i++) {
+    if(arrayOne[i] === arrayTwo[i]){
+      output++
     }
-    }
-  }
-  if (output === length1 && output === length2) {
+    
+  }if(output === arrayOne.length && output === arrayTwo.length){
     return true;
-  } 
+  } else {
     return false
   }
-  
+}
 
+const eqObjects = function(object1, object2) {
+  var match = false;
+  if (Object.keys(object1).length === Object.keys(object2).length){
+    for(const item in object1) {
+      match = false;
+      if (typeof(object1[item]) === "object" && (object1[item].length === object2[item].length)) {
+        match = eqArrays (object1[item],object2[item]);
+      } else if (object1[item] === object2[item]){
+        match = true;
+    } 
+  }
+}
+return match;
+}
 
 
 const ab = { a: "1", b: "2" };
