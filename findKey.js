@@ -9,15 +9,15 @@ const assertEqual = function(actual, expected) {
 };
 
 
-const findKey = function(object, callback){
+const findKey = function(object, callback) {
   let result = undefined;
-  for(const item in object){
-    if(callback(object[item])){
+  for (const item in object) {
+    if (callback(object[item])) {
       result=item;
       return result;
     }
   }
-}
+};
 
 // console.log (findKey ({
 //   "Blue Hill": { stars: 1 },

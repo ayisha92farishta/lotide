@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@ayisha92farishta/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "library",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/ayisha92farishta/lotide.git"
   },
-  "author": "",
+  "author": "Ayisha Farishta Ashraf",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ayisha92farishta/lotide/issues"
