@@ -25,7 +25,9 @@ const without = function (source, itemsToRemove) {
 }
 
 
-console.log(without([1,2,3,4,5,6],[3,5]))
+// console.log(without([1,2,3,4,5,6],[3,5]))
 
 
-assertArraysEqual((without([1,2,3,4,5,6],[3,5])), [ 1, 2, 4, 6 ])
+// assertArraysEqual((without([1,2,3,4,5,6],[3,5])), [ 1, 2, 4, 6 ])
+
+module.exports = without;

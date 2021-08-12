@@ -39,6 +39,9 @@ const takeUntil = function(array, isLessThanZero){
 
 //console.log(results1);
 
-console.log(takeUntil([1, 2, 5, 7, 2, -1, 2, 4, 5], x => x < 0) )
+//console.log(takeUntil([1, 2, 5, 7, 2, -1, 2, 4, 5], x => x < 0) )
 
 //assertArraysEqual(results1,[ 1, 2, 5, 7, 2 ])
+
+
+module.exports = takeUntil;

@@ -34,4 +34,6 @@ const letterPositions = function(sentence) {
   return results;
 };
 
-console.log(letterPositions("lighthouse Labsh"))
+// console.log(letterPositions("lighthouse Labsh"))
+
+module.exports = letterPositions;

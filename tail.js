@@ -1,8 +1,10 @@
 const assertEqual = require('./assertEqual')
 
 const tail = function(array) {
-  array.shift();
-  return array;
+  let copyArr = array.slice()
+  copyArr.shift();
+  return copyArr;
 };
+
 
 module.exports = tail;
